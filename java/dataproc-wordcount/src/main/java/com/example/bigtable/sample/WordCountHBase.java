@@ -61,8 +61,8 @@ public class WordCountHBase {
       StringTokenizer itr = new StringTokenizer(value.toString());
       ImmutableBytesWritable word = new ImmutableBytesWritable();
       while (itr.hasMoreTokens()) {
-        word.set(Bytes.toBytes(itr.nextToken()));
         /*
+        word.set(Bytes.toBytes(itr.nextToken()));
         context.write(word, one);
         */
       }
