@@ -82,7 +82,7 @@ start)  # start [<clusterName>]
 
   CLUSTER="${2:-$DEFAULT_CLUSTER}"
 
-  TARGET="WordCount-$(date +%s)"
+  TARGET="WordCount-1504533220"
   gcloud dataproc jobs submit hadoop --cluster "$CLUSTER" \
     --jar target/wordcount-mapreduce-0-SNAPSHOT-jar-with-dependencies.jar \
     -- wordcount-hbase \
