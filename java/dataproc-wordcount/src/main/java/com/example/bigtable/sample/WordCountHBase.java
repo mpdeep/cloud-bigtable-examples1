@@ -62,7 +62,9 @@ public class WordCountHBase {
       ImmutableBytesWritable word = new ImmutableBytesWritable();
       while (itr.hasMoreTokens()) {
         word.set(Bytes.toBytes(itr.nextToken()));
+        /*
         context.write(word, one);
+        */
       }
     }
   }
