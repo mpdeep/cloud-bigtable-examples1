@@ -92,7 +92,7 @@ start)  # start [<clusterName>]
     gs://lesv-big-public-data/books/b1232 \
     gs://lesv-big-public-data/books/b6130 \
     "${TARGET}"
-    echo "Output table is: ${TARGET}"
+#    echo "Output table is: ${TARGET}"
   ;;
 
 ssh)  # ssh [<clusterName>]
