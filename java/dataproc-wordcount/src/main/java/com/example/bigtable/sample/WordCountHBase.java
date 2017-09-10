@@ -103,12 +103,14 @@ public class WordCountHBase {
     }
 
     TableName tableName = TableName.valueOf(otherArgs[otherArgs.length - 1]);
+    /*
     try {
       CreateTable.createTable(tableName, conf,
           Collections.singletonList(Bytes.toString(COLUMN_FAMILY)));
     } catch (Exception e) {
       LOG.error("Could not create the table.", e);
     }
+    */
 
     job.setJarByClass(WordCountHBase.class);
     job.setMapperClass(TokenizerMapper.class);
