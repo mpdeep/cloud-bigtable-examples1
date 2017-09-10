@@ -61,6 +61,7 @@ public class WordCountHBase {
       StringTokenizer itr = new StringTokenizer(value.toString());
       ImmutableBytesWritable word = new ImmutableBytesWritable();
       while (itr.hasMoreTokens()) {
+        itr.nextToken();
         /*
         word.set(Bytes.toBytes(itr.nextToken()));
         context.write(word, one);
@@ -76,8 +77,8 @@ public class WordCountHBase {
     public void reduce(ImmutableBytesWritable key, Iterable<IntWritable> values, Context context)
         throws IOException, InterruptedException {
       int sum = sum(values);
-      Put put = new Put(key.get());
       /*
+      Put put = new Put(key.get());
       put.addColumn(COLUMN_FAMILY, COUNT_COLUMN_NAME, Bytes.toBytes(sum));
       context.write(null, put);
       */
